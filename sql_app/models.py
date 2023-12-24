@@ -1,4 +1,4 @@
-from sqlalchemy import Column, ForeignKey, Integer, String, Datetime
+from sqlalchemy import Column, ForeignKey, Integer, String, DateTime
 from .database import Base
 
 class User(Base):
@@ -18,5 +18,5 @@ class Booking(Base):
   user_id = Column(Integer, ForeignKey('users.user_id', ondelete='SET NULL'), nullable=False)
   room_id = Column(Integer, ForeignKey('rooms.room_id', ondelete='SET NULL'), nullable=False)
   booked_num = Column(Integer)
-  start_date_time = Column(Datetime, nullable=False)
-  end_date_time = Column(Datetime, nullable=False)
+  start_date_time = Column(DateTime, nullable=False)
+  end_date_time = Column(DateTime, nullable=False)
