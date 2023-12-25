@@ -5,8 +5,8 @@ class BookingCreate(BaseModel):
   user_id: int
   room_id: int
   booked_num: int
-  start_datetime: datetime.datetime
-  end_datetime: datetime.datetime
+  start_date_time: datetime.datetime
+  end_date_time: datetime.datetime
 
 class Booking(BookingCreate):
   booking_id: int
